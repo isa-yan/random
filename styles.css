@@ -268,14 +268,3 @@ h4{
     0%{opacity:1;}
     100%{opacity:0;}
 }
-
-.donttouchme{
-    animation-name:donttouchme;
-    animation-iteration-count: infinite;
-
-}
-
-@keyframes donttouchme{
-    0%{transform:rotate(0deg) translateY(100px) rotate(0deg)}
-    100%{transform:rotate(360deg) translateY(100px) rotate(-360deg)}
-}
