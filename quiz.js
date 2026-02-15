@@ -10,9 +10,19 @@ let woord = document.getElementById('wordofgood')
 
 gayd.onclick = function(){
     count++;
-    if (count>=5){
+    if (count===5){
         alert('honey...');
     }
+    if (count === 10){
+        alert('why')
+    }
+
+    if (count >= 12){
+        alert('dang person y')
+        gayd.innerHTML='<a href="new"><button>no</button></a>'
+
+    }
+
 
 }
 
@@ -27,7 +37,6 @@ gays.onclick = function(){
 }
 
 /* ok so um yeah this is the more actual part like avoiding*/
-var avoiding = document.getElementById('donttouchme');
 
 /* logic 
 1. generate a random number of both x and y
@@ -35,13 +44,12 @@ var avoiding = document.getElementById('donttouchme');
 3. on click, the elemnt moves in any direction away from the mouse 
 */
 
-avoiding.addEventListener("click",() => {runaway();})
+gayd.addEventListener("click",() => {runaway();})
 
 
 function runaway(){
-    const newTop = Math.round((Math.random()) * 100);
-    const newLeft = Math.round((Math.random()) * 100); 
-    avoiding.style.top = newTop + "px"
-    avoiding.style.left = newLeft + "px"
-    console.log('ran!')
+    const newTop = Math.round((Math.random()) * 500);
+    const newLeft = Math.round((Math.random()) * 500); 
+    gayd.style.top = newTop + "px"
+    gayd.style.left = newLeft + "px"
 }
