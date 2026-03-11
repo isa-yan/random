@@ -176,7 +176,15 @@ h4{
     margin-right:5%;
     padding: 0px 10px 0px 10px;
     list-style-type:none;
+    position:absolute;
+    animation: moving 3s linear infinite;
+    left:0%;
+    top:30%;
+}
 
+@keyframes moving{
+    from{left:0%}
+    to{left:100%}
 }
 
 /* Quiz page code */
@@ -268,3 +276,7 @@ h4{
     0%{opacity:1;}
     100%{opacity:0;}
 }
+
+
+
+
