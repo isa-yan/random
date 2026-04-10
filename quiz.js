@@ -2,6 +2,8 @@ let gay = document.getElementById('gay')
 
 let gayd = document.getElementById('gayd')
 let gays = document.getElementById('gays')
+let maybe = document.getElementById('maybe')
+let ask = document.getElementById('ask')
 const dancingqueen = document.getElementById('queen')
 let count = 0
 
@@ -10,16 +12,15 @@ let woord = document.getElementById('wordofgood')
 
 gayd.onclick = function(){
     count++;
-    if (count===5){
-        alert('honey...');
+    if (count===3){
+        ask.innerText='hmmmmmmmm'
     }
-    if (count === 10){
-        alert('why')
+    if (count === 5){
+        ask.innerText='rlly?'
     }
 
-    if (count >= 12){
-        alert('dang person y')
-        gayd.innerHTML='<a href="new"><button>no</button></a>'
+    if (count >= 7){
+        gayd.innerHTML='<a href="well.html">no</a>'
 
     }
 
@@ -27,12 +28,12 @@ gayd.onclick = function(){
 }
 
 gays.onclick = function(){
-    alert('bitch you gay :D')
     dancingqueen.classList.add('fade-in');
     dancingqueen.style.zIndex = 100000;
     woord.textContent = 'YAY THEY CAME OUT'
     gayd.classList.add('fade-out')
     gays.classList.add('fade-out')
+    maybe.classList.add('fade-out')
     
 }
 
@@ -48,8 +49,8 @@ gayd.addEventListener("click",() => {runaway();})
 
 
 function runaway(){
-    const newTop = Math.round((Math.random()) * 500);
-    const newLeft = Math.round((Math.random()) * 500); 
+    const newTop = Math.round((Math.random()) * 600)+100;
+    const newLeft = Math.round((Math.random()) * 800)+100; 
     gayd.style.top = newTop + "px"
     gayd.style.left = newLeft + "px"
 }

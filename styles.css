@@ -134,6 +134,7 @@ nav ul li:hover{
     padding:10px;
     position:absolute;
     animation: moving 3s linear infinite;
+    display:inline-block;
     left:0%;
     top:30%;
 }
@@ -154,8 +155,9 @@ h4{
 
 /* resources page */
 
-.immagoodperson{
-    margin-top:5%;
+@keyframes inn{
+    from{opacity:0}
+    to{opacity:1}
 }
 
 .immagoodperson h3{
@@ -167,15 +169,21 @@ h4{
     
 }
 
-.immagoodperson ul{
+.immagoodperson{
+    margin-top:5%;
+    animation: inn 3s ease-in-out forwards;
+    opacity:0;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     flex-wrap:wrap;
-    align-content:space-between;
+    align-content:center;
+    gap:20px
+    
 
 }
 
-.immagoodperson li{
+.immagoodperson > div{
     border-style:solid;
     border-radius:5px;
     border-width:3px;
@@ -183,69 +191,63 @@ h4{
     background-color:rgb(255, 255, 255);
     margin-left:5%;
     margin-right:5%;
-    padding: 0px 10px 0px 10px;
-    list-style-type:none;
+    padding: 5px 10px 5px 10px;
+    width:500px;
+    transition:0.5s ease-out;
+
+}
+
+.immagoodperson > div >:first-child{
+    font-weight:bold;
+
+}
+
+.immagoodperson > div:hover{
+    transform:translateY(-5%);
 }
 
 
 /* Quiz page code */
 
-.move-in-top{
-    animation-name:move-in;
-    animation-duration:1s;
-    animation-timing-function:ease;
-}
-
-@keyframes move-in{
-    0%{left:0px; top:0px;}
-    50%{left:10%; top:50%;}
-    100%{left:20%; top:35%;}
-}
-
 .yesorno{
-    display:flex;
-    justify-content: space-around;
-    align-content:center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
 
-.yes{
-    position:absolute;
-    top:35%;
-    left:20%;
+.asking{
     border-style:solid;
-    background-color:rgb(189, 255, 189);
-    border-color:rgb(118, 255, 118);
     padding:6.7%;
     border-width:10px;
     border-radius:10px;
     font-size:64px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition:transform 100ms;
+    opacity:1;
 }
 
-.yes:hover{
-    text-decoration-line:underline;
-    transform:translateY(-10px);
+.yes{
+    background-color:rgb(189, 255, 189);
+    border-color:rgb(118, 255, 118);
 }
 
-.no:hover{
+.yesorno>*:hover{
     text-decoration-line:underline;
     transform:translateY(-10px);
 }
 
 .no{
-    position:absolute;
-    top:35%;
-    right:20%;
-    border-style:solid;
     background-color:rgb(212, 138, 138);
     border-color:rgb(255, 121, 121);
-    padding:3.35%px;
-    border-width:5px;
-    border-radius:5px;
-    font-size:32px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    transition:transform 100ms;
+}
+
+.maybe{
+    background-color:rgb(255, 193, 111);
+    border-color:rgb(255, 136, 0);
 
 }
 
@@ -277,8 +279,4 @@ h4{
     0%{opacity:1;}
     100%{opacity:0;}
 }
-
-
-
-
 
