@@ -30,7 +30,7 @@ gayd.onclick = function(){
 gays.onclick = function(){
     dancingqueen.classList.add('fade-in');
     dancingqueen.style.zIndex = 100000;
-    woord.textContent = 'YAY THEY CAME OUT'
+    woord.textContent = 'YAY'
     gayd.classList.add('fade-out')
     gays.classList.add('fade-out')
     maybe.classList.add('fade-out')
